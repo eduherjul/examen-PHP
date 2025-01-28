@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $consulta = $conexion->prepare("INSERT INTO urls (url_original, url_corta, usuario_id) VALUES (?, ?, ?)");
   $consulta->execute([$url_original, $url_corta, $usuarioId]);
   
-  //Almacenamos la url generadanombre de usuario
+  //Almacenamos la url generada
   $_SESSION["url_corta"] = $url_corta;
 
   //Mostramos la URL corta generada
